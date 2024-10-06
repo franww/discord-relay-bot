@@ -1,5 +1,8 @@
 import discord
 from discord.ext import commands
+from keep_alive import keep_alive
+import os
+
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -8,9 +11,10 @@ intents.guilds = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-CANAL_ORIGEM_ID = first id
-CANAL_DESTINO_ID = second id
+CANAL_ORIGEM_ID = 1292499842643267594
+CANAL_DESTINO_ID = 1292490095034634354
 
+keep_alive()
 
 @bot.event
 async def on_ready():
